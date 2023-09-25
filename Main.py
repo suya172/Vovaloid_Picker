@@ -5,7 +5,7 @@ from GenerateMessage import create_message
 import Config
 
 TOKEN=Config.TOKEN
-CHANNEL_ID=1067808770425630860
+CHANNEL_ID=Config.CHANNEL_ID
 intents=discord.Intents.all()
 
 time_to_send='21:00'
