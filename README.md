@@ -1,2 +1,2 @@
-# Bokete_pickup
-定期的にboketeから人気のボケを取得
+# VocalodPicker
+毎日九時に前日投稿されたvocaloid新曲リンクタグを含む動画をランダムに一つ選んで共有
