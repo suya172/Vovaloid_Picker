@@ -12,7 +12,7 @@ def get_json(url):
         res = requests.get(
             url,
             params={
-                "q": "vocaloid新曲リンク",
+                "q": "vocaloidオリジナル曲",
                 "targets": "tagsExact",
                 "fields": "contentId,title",
                 "filters[startTime][gte]": f"{yesterday.isoformat()}T00:00:00+09:00",
