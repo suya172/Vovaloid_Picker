@@ -4,7 +4,7 @@ import discord
 import pytz
 from discord.ext import tasks
 
-import Config
+import Config as Config
 from GenerateMessage import create_message
 import asyncio
 from keep_alive import keep_alive
