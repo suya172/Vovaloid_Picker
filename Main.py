@@ -7,7 +7,6 @@ from discord.ext import tasks
 import Config as Config
 from GenerateMessage import create_message
 import asyncio
-from keep_alive import keep_alive
 
 TOKEN = Config.TOKEN
 CHANNEL_ID = int(Config.CHANNEL_ID)
@@ -38,5 +37,4 @@ async def on_ready():
     print(f'起動しました。{(datetime.now() + timedelta(hours=9)).isoformat()}')
     await checkTime.start()
 
-keep_alive()  # Starts the web server
 client.run(TOKEN)
