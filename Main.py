@@ -10,6 +10,7 @@ import asyncio
 
 TOKEN = Config.TOKEN
 CHANNEL_ID = int(Config.CHANNEL_ID)
+DEBUG_CHANNEL_ID = int(Config.DEBUG_CHANNEL_ID)
 intents = discord.Intents.all()
 
 time_to_send = '21:00'

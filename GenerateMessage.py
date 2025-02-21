@@ -32,7 +32,7 @@ def get_json(url):
     return data
 
 
-def create_message(url='https://api.search.nicovideo.jp/api/v2/snapshot/video/contents/search'):
+def create_message(url='https://snapshot.search.nicovideo.jp/api/v2/snapshot/video/contents/search'):
     data = get_json(url=url)
     status = data['meta']['status']
     message = f'エラー： HTTPステータスコード{status}'
@@ -51,3 +51,6 @@ def create_message(url='https://api.search.nicovideo.jp/api/v2/snapshot/video/co
         title = pick_content['title']
         message = f'今日の新着ボカロ曲だよ！\n\n{title}\nhttps://www.nicovideo.jp/watch/{Id}'
     return message
+
+if __name__ == '__main__':
+    print(create_message())
