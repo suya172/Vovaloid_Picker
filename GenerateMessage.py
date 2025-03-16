@@ -2,6 +2,7 @@ import requests
 import json
 from datetime import date, timedelta
 import random
+import pickle
 
 
 def get_json(url):
@@ -49,6 +50,11 @@ def create_message(url='https://snapshot.search.nicovideo.jp/api/v2/snapshot/vid
         pick_content = random.choice(contents_array)
         Id = pick_content['contentId']
         title = pick_content['title']
+        with open('history.pkl', 'rb') as f:
+            history = pickle.load(f)
+        history.append(Id)
+        with open('history.pkl', 'wb') as f:
+            pickle.dump(history, f)
         message = f'今日の新着ボカロ曲だよ！\n\n{title}\nhttps://www.nicovideo.jp/watch/{Id}'
     return message
 
